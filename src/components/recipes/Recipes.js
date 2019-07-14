@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 
 const Recipes = (props)=>(
   <div>
-    {props.recipes.map((recipe)=>{
+    {props.recipes && props.recipes.map((recipe)=>{
       return <div className="container mt-2" key={recipe.recipe_id}>
           <div className="row">
             <div className="col-lg-8 col-md-9 col-sm-10 mx-auto">
@@ -17,7 +17,7 @@ const Recipes = (props)=>(
                       <h4 className="card-title ">@{ recipe.title.length < 20 ? `${recipe.title}` : `${recipe.title.substring(0, 25)}...` }</h4>
                       <p className="card-text">{ recipe.publisher.length < 20 ? `${recipe.publisher}` : `${recipe.publisher.substring(0, 25)}...` }</p>
                       <button type="button" className="btn btn-outline-secondary float-right">
-                        <Link to={{pathname: `/recipe/${recipe.recipe_id}`, state: { recipe: recipe.title }}}> See more </Link>
+                        <Link to={{pathname: `/recipe/${recipe.recipe_id}`,state: { recipe: recipe.title }}}> See more </Link>
                       </button>
                     </div>
                   </div>

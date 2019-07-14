@@ -4,12 +4,14 @@ import Searcher from './components/searcher/Searcher';
 import Recipes from './components/recipes/Recipes'
 
 
-const key = "d8c18edd0b7973738f811b593d8ad815";
+const key = "10b5a5825540c475f10e0f0dda30e92f"
+// "d8c18edd0b7973738f811b593d8ad815";
 
 class App extends Component{
   state = {
     recipes:[]
   }
+ 
   getData = async (e)=>{
     const search= e.target.elements.search.value
     // console.log(search)
@@ -17,7 +19,7 @@ class App extends Component{
     const api_call = await fetch(`https://cors-anywhere.herokuapp.com/http://food2fork.com/api/search?key=${key}&q=${search}&count=15`)
     const data = await api_call.json()
     // console.log(data)
-    this.setState({recipes:data.recipes})
+    this.setState({ recipes: data.recipes})
     console.log(this.state.recipes)
   }
   render(){
