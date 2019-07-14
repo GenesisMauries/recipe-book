@@ -1,0 +1,9 @@
+#img-zoom{
+    transition: all .5s ease-in-out
+}
+#img-zoom:hover{
+    transform: scale(1.5)
+}
+.img-contenedor {/*Ancho y altura son modificables al requerimiento de cada uno*/
+    overflow:hidden;
+}

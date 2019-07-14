@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from "react-router-dom";
 
+
 const key = "d8c18edd0b7973738f811b593d8ad815"
 // "10b5a5825540c475f10e0f0dda30e92f"
 // ;
@@ -25,8 +26,8 @@ class Recipe extends Component {
             <div className="row">
             { this.state.active.length !== 0 && 
               <div className="col-8 mx-auto">
-              <div className="card">
-                <img src={this.state.active.image_url} className="card-img-top" alt={this.state.active.title}/>
+              <div  className="card">
+                <img  src={this.state.active.image_url} className="card-img-top" alt={this.state.active.title}/>
                 <div className="card-body">
                   <h5 className="card-title">{this.state.active.title}</h5>
                   <p className="card-text">Publisher: <span> {this.state.active.publisher} </span></p>
