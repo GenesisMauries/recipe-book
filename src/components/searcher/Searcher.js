@@ -1,7 +1,8 @@
 import React from 'react';
+
 const Searcher = (props)=>(
     <form onSubmit={props.getData} >
-        <div className="col-6 mx-auto input-group mb-3">
+        <div className="col-lg-6 col-md-10 col-sm-10 mx-auto input-group mb-3">
             <div className="input-group-append">
                 <button className="btn btn-success">Search</button>
             </div>

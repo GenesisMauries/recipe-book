@@ -4,6 +4,6 @@
 #img-zoom:hover{
     transform: scale(1.5)
 }
-.img-contenedor {/*Ancho y altura son modificables al requerimiento de cada uno*/
+.img-contenedor {
     overflow:hidden;
 }
