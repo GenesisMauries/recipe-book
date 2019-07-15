@@ -30,7 +30,7 @@ class Recipe extends Component {
               <div className="card-body">
                 <h5 className="card-title">{this.state.active.title}</h5>
                 <p className="card-text">Publisher: <span> {this.state.active.publisher} </span></p>
-                <p className="card-text">Website: <a href={this.state.active.publisher_url}>{this.state.active.publisher_url}</a></p>
+                <p className="card-text">Website: <a target= "_blank" href={this.state.active.publisher_url}>{this.state.active.publisher_url}</a></p>
                 <button className="btn btn-outline-success float-right" id="home">
                   <Link to="/">Home</Link>
                 </button>
