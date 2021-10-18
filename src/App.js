@@ -16,7 +16,7 @@ class App extends Component{
     const search= e.target.elements.search.value
     // console.log(search)
     e.preventDefault()
-    const api_call = await fetch(`https://cors-anywhere.herokuapp.com/http://food2fork.com/api/search?key=${key}&q=${search}&count=15`)
+    const api_call = await fetch(`http://food2fork.com/api/search?key=${key}&q=${search}&count=15`)
     const data = await api_call.json()
     // console.log(data)
     this.setState({ recipes: data.recipes})
